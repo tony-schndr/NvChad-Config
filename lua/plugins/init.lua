@@ -9,6 +9,17 @@ return {
   {
     "mfussenegger/nvim-dap"
   },
+   {
+    "rcarriga/nvim-dap-ui",
+    dependencies = "mfussenegger/nvim-dap",
+    init = function()
+      require("dapui").setup()
+      -- require("core.utils").load_mappings("dapui")
+    end
+  },
+  {
+    "/nvim-neotest/nvim-nio"
+  },
   {
     "dreamsofcode-io/nvim-dap-go",
     ft = "go",
