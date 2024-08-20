@@ -1,24 +1,23 @@
 return {
   {
     "stevearc/conform.nvim",
-    event = 'BufWritePre', -- uncomment for format on save
+    event = "BufWritePre", -- uncomment for format on save
     config = function()
       require "configs.conform"
     end,
   },
   {
-    "mfussenegger/nvim-dap"
+    "mfussenegger/nvim-dap",
   },
-   {
+  {
     "rcarriga/nvim-dap-ui",
     dependencies = "mfussenegger/nvim-dap",
     init = function()
       require("dapui").setup()
-      -- require("core.utils").load_mappings("dapui")
-    end
+    end,
   },
   {
-    "/nvim-neotest/nvim-nio"
+    "nvim-neotest/nvim-nio",
   },
   {
     "dreamsofcode-io/nvim-dap-go",
@@ -27,7 +26,7 @@ return {
     config = function(_, opts)
       require("dap-go").setup(opts)
       -- require("core.utils").load_mappings("dap_go")
-    end
+    end,
   },
   -- These are some examples, uncomment them if you want to see them work!
   {
